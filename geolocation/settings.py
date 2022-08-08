@@ -126,5 +126,8 @@ MEDIA_ROOT = str(BASE_DIR / 'media')
 
 #Geoip
 YELP_API_KEY = 'BtlUQcIYnYME286zq3vB1cqh4nPttpdZFYeqYfqxRC-FDoOvqj_wAa7MxgS12C-2cjGuR8k03oH5yq8D3l8TjWevqLX5ZDvg_lkiDPRixDpYucRNE_4R-a659VrwYnYx'
+GEOIP_PATH = str(BASE_DIR / 'geoip')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGOUT_REDIRECT_URL = 'index'
