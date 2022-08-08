@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import View
-from .utils import yelp_search, get_client_data
+
+from .utils import get_client_data, yelp_search
+
 
 class IndexView(View):
     def get(self, request, *args, **kwargs):
@@ -10,7 +12,8 @@ class IndexView(View):
 
         while not city:
             ret = get_client_data()
-            city = ret['city']
+            if ret:
+                city = ret['city']
 
         key = request.GET.get('key', None)
         loc = request.GET.get('loc', None)
